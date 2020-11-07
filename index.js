@@ -1,7 +1,7 @@
 import { createServer } from 'http';
 import { readFile } from 'fs';
 import path from 'path'
-import mime from'mime';
+
 
 const PORT = process.argv[2];
 
