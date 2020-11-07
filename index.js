@@ -15,6 +15,7 @@ const whenIncomingRequest = (request, response) => {
     response.writeHead(200, { 'Content-Type': 'text/html' });
     response.end(content, 'utf-8');
     }
-});
+})
+};
 
-createServer(whenIncomingRequest).listen(PORT)
+createServer(whenIncomingRequest).listen(PORT);
