@@ -12,7 +12,7 @@ const whenIncomingRequest = (request, response) => {
   const extName = String(path.extname(filePath)).toLowerCase();
   const mimeTypes = {
     '.html': 'text/html',
-    '.js': 'text/javascript',
+    '.js': 'application/javascript',
     '.css': 'text/css',
     '.json': 'application/json',
     '.png': 'image/png',
