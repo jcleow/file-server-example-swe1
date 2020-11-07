@@ -1,6 +1,7 @@
 import { createServer } from 'http';
 import { readFile } from 'fs';
 import path from 'path'
+import mime from'mime';
 
 const PORT = process.argv[2];
 
@@ -12,7 +13,7 @@ const whenIncomingRequest = (request, response) => {
   const extName = String(path.extname(filePath)).toLowerCase();
   const mimeTypes = {
     '.html': 'text/html',
-    '.js': 'application/javascript',
+    '.js': 'text/javascript',
     '.css': 'text/css',
     '.json': 'application/json',
     '.png': 'image/png',
