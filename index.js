@@ -9,9 +9,12 @@ const whenIncomingRequest = (request, response) => {
   var filePath = '.' + request.url;
 
   readFile(filePath, (error, content) => {
+    if (error){
+      console.log(error,'error');
+    }else{
     response.writeHead(200, { 'Content-Type': 'text/html' });
     response.end(content, 'utf-8');
-  });
-};
+    }
+});
 
 createServer(whenIncomingRequest).listen(PORT)
